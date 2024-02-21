@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginMAUI.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Grid.Column="1" Grid.Row="1">
+            <Label 
+            Text="Login"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" TextColor="AntiqueWhite" FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+        
+        <Image Source="descarga.jpeg" Grid.Column="1" Grid.Row="1"></Image>
+        <VerticalStackLayout Grid.Column="1" Grid.Row="2">
+            <Entry x:Name="eUser" Keyboard="Email" Placeholder="Usuario"/>
+            <Entry x:Name="ePassword" IsPassword="True" Placeholder="Contraseña"/>
+        </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Column="1" Grid.Row="3">
+            <Button x:Name="btnIngresar" TextColor="Black" Background="AliceBlue" CornerRadius="30" Text="Ingresar" Padding="20" Clicked="btnIngresar_Clicked" BorderWidth="1"/>
+            <Button x:Name="btnNewUser" TextColor="White" Background="#34AB95"  CornerRadius="20" Text="Nuevo Usuario" Clicked="btnNewUser_Clicked" BorderWidth="2" FontAutoScalingEnabled="True" VerticalOptions="Fill" BorderColor="Snow"/>
+        </HorizontalStackLayout>
+    </Grid>
+
+</ContentPage>

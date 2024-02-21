@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginMAUI.NuevoUsuario"
+             Title="NuevoUsuario">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Grid.Column="1" Grid.Row="2" >
+            <Entry x:Name="eUsername" Keyboard="Text" Placeholder="Nombre" TextColor="Aquamarine"/>
+            <Entry x:Name="eGmail" Keyboard="Email" Placeholder="Usuario" TextColor="Aquamarine"/>
+            <Entry x:Name="eNum" Placeholder="Telefono" TextColor="Aquamarine"/>
+            <Entry x:Name="ePassword" IsPassword="True" Placeholder="Contraseña" TextColor="Aquamarine"/>
+        </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Column="1" Grid.Row="5">
+            <Button x:Name="btnRegistrar" TextColor="White" Background="#34AB95"  CornerRadius="20" Text="Registrar" BorderWidth="2" FontAutoScalingEnabled="True" BorderColor="Snow"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
