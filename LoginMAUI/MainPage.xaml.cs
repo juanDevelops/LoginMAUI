@@ -11,10 +11,6 @@
 
         private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
-            if (eUser.Text == null || ePassword.Text == null)
-            {
-                return;
-            }
             await DisplayAlert("Aviso", "Bienvenida", "Ok");
         }
 
