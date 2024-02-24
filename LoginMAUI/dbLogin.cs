@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using Microsoft.Data.SqlClient;
+using MySqlConnector;
 
 namespace LoginMAUI
 {
-    public class db
+    public class dbLogin
     {
-        private readonly string _connectionString = "Server=127.0.0.1;Database=loginDB;User Id=root;Password=Abc123.;";
+        string connectionString = "Server=127.0.0.1;Port=3306;Database=loginDB;Uid=root;Pwd=Abc123.;";
 
-        public void InsertarUsuario(String nombre, String telefono, String email, char genero, DateTime fechaNacimiento, String contraseña)
+        public void InsertarUsuario(string nombre, string telefono, string email, char genero, DateTime fechaNacimiento, string contraseña)
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (var connection = new MySqlConnection(connectionString))
             {
                 string query = @"INSERT INTO users (nombre, telefono, email, genero, fecha_nacimiento, contraseña) 
-                             VALUES (@Nombre, @Telefono, @Email, @Genero, @FechaNacimiento, @Contraseña)";
+                                 VALUES (@Nombre, @Telefono, @Email, @Genero, @FechaNacimiento, @Contraseña)";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
                     command.Parameters.AddWithValue("@Telefono", telefono);

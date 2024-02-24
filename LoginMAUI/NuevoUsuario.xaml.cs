@@ -7,7 +7,7 @@ public partial class NuevoUsuario : ContentPage
 		InitializeComponent();
 	}
 
-    db db = new db();
+    dbLogin db = new dbLogin();
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {

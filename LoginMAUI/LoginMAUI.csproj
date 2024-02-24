@@ -51,6 +51,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="MySqlConnector" Version="2.3.5" />
 	</ItemGroup>
 
 	<ItemGroup>
