@@ -4,7 +4,7 @@ namespace LoginMAUI
 {
     public class dbLogin
     {
-        string connectionString = "Server=192.168.1.69;Port=3306;Database=loginDB;Uid=juan;Pwd=Abc123.;";
+        string connectionString = "Server=192.168.94.205;Port=3306;Database=loginDB;Uid=juan;Pwd=Abc123.;SSL Mode=None";
         public string errorMessage = "";
 
         public bool InsertarUsuario(string nombre, string telefono, string email, char genero, DateTime fechaNacimiento, string contraseña)
