@@ -1,14 +1,17 @@
-﻿using System;
-using MySqlConnector;
+﻿using MySqlConnector;
 
 namespace LoginMAUI
 {
     public class dbLogin
     {
-        string connectionString = "Server=127.0.0.1;Port=3306;Database=loginDB;Uid=root;Pwd=Abc123.;";
+        string connectionString = "Server=192.168.1.69;Port=3306;Database=loginDB;Uid=juan;Pwd=Abc123.;";
+        public string errorMessage = "";
 
-        public void InsertarUsuario(string nombre, string telefono, string email, char genero, DateTime fechaNacimiento, string contraseña)
+        public bool InsertarUsuario(string nombre, string telefono, string email, char genero, DateTime fechaNacimiento, string contraseña)
         {
+            bool success = false;
+            errorMessage = "";
+
             using (var connection = new MySqlConnection(connectionString))
             {
                 string query = @"INSERT INTO users (nombre, telefono, email, genero, fecha_nacimiento, contraseña) 
@@ -27,14 +30,22 @@ namespace LoginMAUI
                     {
                         connection.Open();
                         int rowsAffected = command.ExecuteNonQuery();
-                        Console.WriteLine($"Se han insertado {rowsAffected} filas.");
+                        success = rowsAffected > 0;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        errorMessage = ex.Message;
+                        // Manejo de excepciones específicas de MySQL
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Error al insertar el usuario: " + ex.Message);
+                        errorMessage = ex.Message;
+                        // Manejo de otras excepciones
                     }
                 }
             }
+
+            return success;
         }
     }
 }
