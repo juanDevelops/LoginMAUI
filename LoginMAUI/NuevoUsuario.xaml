@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginMAUI.NuevoUsuario"
-             Title="NuevoUsuario">
+             Title="NuevoUsuario"
+             BackgroundColor="White">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -24,11 +25,34 @@
         </Grid.RowDefinitions>
 
         <!-- Nombre -->
-        <Entry Grid.Column="1" Grid.Row="3" x:Name="tbNombre" Placeholder="Nombre completo"/>
+        <Entry Grid.Column="1" Grid.Row="3" x:Name="tbNombre" Placeholder="Nombre completo">
+            <Entry.Shadow>
+                <Shadow Brush="Black"
+                    Offset="5,5"
+                    Radius="7"
+                    Opacity="0.4"/>
+            </Entry.Shadow>
+        </Entry>
+        
+
         <!-- Teléfono -->
-        <Entry Grid.Column="1" Grid.Row="4" x:Name="tbTelefono" Placeholder="Telefono"/>
+        <Entry Grid.Column="1" Grid.Row="4" x:Name="tbTelefono" Placeholder="Telefono">
+            <Entry.Shadow>
+                <Shadow Brush="Black"
+            Offset="5,5"
+            Radius="7"
+            Opacity="0.4"/>
+            </Entry.Shadow>
+        </Entry>
         <!-- Email -->
-        <Entry Grid.Column="1" Grid.Row="5" x:Name="tbEmail" Placeholder="Email"/>
+        <Entry Grid.Column="1" Grid.Row="5" x:Name="tbEmail" Placeholder="Email">
+            <Entry.Shadow>
+                <Shadow Brush="Black"
+            Offset="5,5"
+            Radius="7"
+            Opacity="0.4"/>
+            </Entry.Shadow>
+        </Entry>
         <!-- Género -->
         <Label Grid.Column="1" Grid.Row="6" Text="Género:"/>
         <StackLayout Grid.Column="1" Grid.Row="7" Orientation="Horizontal">
@@ -40,12 +64,33 @@
 
         <!-- Fecha de nacimiento -->
         <Label Grid.Column="1" Grid.Row="8" Text="Fecha de Nacimiento:"/>
-        <DatePicker Grid.Column="1" Grid.Row="9" x:Name="dpFechaNacimiento"/>
+        <DatePicker Grid.Column="1" Grid.Row="9" x:Name="dpFechaNacimiento">
+            <DatePicker.Shadow>
+                <Shadow Brush="Black"
+                    Offset="5,5"
+                    Radius="7"
+                    Opacity="0.4"/>
+            </DatePicker.Shadow>
+        </DatePicker>
 
-        <!-- Contraseña y Repetir Contraseña -->
+            <!-- Contraseña y Repetir Contraseña -->
         <StackLayout Grid.Column="1" Grid.Row="10">
-            <Entry x:Name="tbContraseña" Placeholder="Contraseña" IsPassword="True"/>
-            <Entry x:Name="tbRepetirContraseña" Placeholder="Repetir Contraseña" IsPassword="True"/>
+            <Entry x:Name="tbContraseña" Placeholder="Contraseña" IsPassword="True">
+                <Entry.Shadow>
+                    <Shadow Brush="Black"
+                        Offset="5,5"
+                        Radius="7"
+                        Opacity="0.4"/>
+                </Entry.Shadow>
+            </Entry>
+            <Entry x:Name="tbRepetirContraseña" Placeholder="Repetir Contraseña" IsPassword="True">
+                <Entry.Shadow>
+                    <Shadow Brush="Black"
+                        Offset="5,5"
+                        Radius="7"
+                        Opacity="0.4"/>
+                </Entry.Shadow>
+            </Entry>
         </StackLayout>
 
         <!-- Botones -->
