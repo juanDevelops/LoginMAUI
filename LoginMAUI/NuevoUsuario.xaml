@@ -4,15 +4,12 @@
              x:Class="LoginMAUI.NuevoUsuario"
              Title="NuevoUsuario"
              BackgroundColor="White">
-    <Grid>
+    <Grid RowSpacing="5" Margin="15,15,15,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="90*"/>
-            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -24,16 +21,29 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+
+        <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Fill">
+            <Frame BackgroundColor="Transparent" BorderColor="#000" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="45">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#d1e3e4" WidthRequest="40" HeightRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                    <Entry Grid.Column="1" x:Name="tbNombre"  Placeholder="Nombre completo" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="40" Margin="0,0,20,0"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+        
         <!-- Nombre -->
-        <Entry Grid.Column="1" Grid.Row="3" x:Name="tbNombre" Placeholder="Nombre completo">
+        <!--<Entry Grid.Column="1" Grid.Row="3" x:Name="tbNombre" Placeholder="Nombre completo">
             <Entry.Shadow>
                 <Shadow Brush="Black"
                     Offset="5,5"
                     Radius="7"
                     Opacity="0.4"/>
             </Entry.Shadow>
-        </Entry>
-        
+        </Entry>-->
+
 
         <!-- Teléfono -->
         <Entry Grid.Column="1" Grid.Row="4" x:Name="tbTelefono" Placeholder="Telefono">
@@ -95,10 +105,10 @@
 
         <!-- Botones -->
         <StackLayout Grid.Column="1" Grid.Row="11" Orientation="Horizontal" HorizontalOptions="End">
-            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" WidthRequest="110" HeightRequest="40" TextColor="White" Background="#34AB95"  CornerRadius="20"/>
-            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancelar_Clicked" WidthRequest="110" HeightRequest="40" TextColor="Black" Background="AliceBlue"  CornerRadius="20"/>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" WidthRequest="110" HeightRequest="40" TextColor="White" Background="#5ca6b0"  CornerRadius="30"/>
+            <Button x:Name="btnCancelar" Text="Cancelar" Clicked="btnCancelar_Clicked" WidthRequest="110" HeightRequest="40" TextColor="Black" Background="AliceBlue"  CornerRadius="30"/>
         </StackLayout>
-        <VerticalStackLayout  Grid.Column="1" Grid.Row="1" >
+        <!--<VerticalStackLayout  Grid.Column="1" Grid.Row="1" >
             <VerticalStackLayout Spacing="5" Padding="3,0" VerticalOptions="CenterAndExpand">
 
                 <Button Text="Obtener Galeria" Clicked="Button_Clicked_1"   WidthRequest="150" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
@@ -107,6 +117,6 @@
 
             </VerticalStackLayout>
 
-        </VerticalStackLayout>
+        </VerticalStackLayout>-->
     </Grid>
 </ContentPage>
