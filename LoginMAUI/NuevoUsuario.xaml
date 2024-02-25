@@ -32,9 +32,9 @@
         <!-- Género -->
         <Label Grid.Column="1" Grid.Row="6" Text="Género:"/>
         <StackLayout Grid.Column="1" Grid.Row="7" Orientation="Horizontal">
-            <CheckBox x:Name="cbMasculino"/>
+            <CheckBox x:Name="cbMasculino" x:Uid="cbMasc" CheckedChanged="cbMasculino_CheckedChanged"/>
             <Label Text="M" VerticalOptions="Center"/>
-            <CheckBox x:Name="cbFemenino"/>
+            <CheckBox x:Name="cbFemenino" CheckedChanged="cbFemenino_CheckedChanged"/>
             <Label Text="F" VerticalOptions="Center"/>
         </StackLayout>
 

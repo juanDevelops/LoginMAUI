@@ -9,6 +9,9 @@ public partial class NuevoUsuario : ContentPage
 
     dbLogin db = new dbLogin();
 
+    
+
+
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
         
@@ -29,4 +32,21 @@ public partial class NuevoUsuario : ContentPage
     {
         await DisplayAlert("Aviso", "Bienvenida", "Ok");
     }
+
+    private void cbMasculino_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (cbMasculino.IsChecked)
+        {
+            cbFemenino.IsChecked = false;
+        }
+    }
+
+    private void cbFemenino_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (cbFemenino.IsChecked)
+        {
+            cbMasculino.IsChecked = false;
+        }
+    }
+
 }
