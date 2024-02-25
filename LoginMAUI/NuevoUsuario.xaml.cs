@@ -11,8 +11,8 @@ public partial class NuevoUsuario : ContentPage
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
-        //db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text);
-        if (db.InsertarUsuario("Juan Pérez", "123456789", "juan@example.com", 'm', Convert.ToDateTime("1990-01-01"), "contraseña123"))
+        
+        if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
         {
             await DisplayAlert("Aviso", "Bienvenida", "Ok");
         }
