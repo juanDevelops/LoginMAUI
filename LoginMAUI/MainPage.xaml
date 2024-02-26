@@ -45,6 +45,8 @@
                 </Frame>
             </StackLayout>
             <!--#endregion-->
+            
+            
 
             <!--#region ENTRY CONTRASEÑA -->
             <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="Fill">
@@ -68,8 +70,8 @@
             </StackLayout>
             <!--#endregion-->
 
-            <StackLayout Orientation="Horizontal" Grid.Row="3" HorizontalOptions="Fill">
-                <Label Text="Olvidaste la contraseña" TextColor="#fcc" HorizontalOptions="EndAndExpand"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="3" HorizontalOptions="Fill" >
+                <Label Text="Olvidaste la contraseña" TextColor="#fcc" HorizontalOptions="EndAndExpand" />
             </StackLayout>
 
             <Grid Grid.Row="4">
@@ -80,6 +82,11 @@
             <Grid Grid.Row="5" Margin="0,15,0,0">
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="btnSignUp" Text="Crea tu cuenta" Clicked="btnSignUp_Clicked" HeightRequest="50" TextColor="#fcc" Background="#fff" CornerRadius="30" HorizontalOptions="FillAndExpand" BorderColor="#fcc" BorderWidth="1.5" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="6" Margin="0,15,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnRecuperarContraseña" Text="Recuperar contraseña" Clicked="btnRecuperarContraseña_Clicked" HeightRequest="50" TextColor="#fcc" Background="#fff" CornerRadius="30" HorizontalOptions="FillAndExpand" BorderColor="#fcc" BorderWidth="1.5" />
                 </StackLayout>
             </Grid>
 

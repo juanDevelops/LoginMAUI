@@ -25,7 +25,6 @@
             }
             else
             {
-                await DisplayAlert("Aviso", db.errorMessage, "Ok");
                 await DisplayAlert("Aviso", "Usuario o contraseña incorrectos.", "Ok");
             }
         }
@@ -47,6 +46,11 @@
         private async void btnSignUp_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NuevoUsuario());
+        }
+
+        private async void btnRecuperarContraseña_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RecuperarContraseña());
         }
     }
 

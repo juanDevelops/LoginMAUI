@@ -26,6 +26,7 @@ public partial class NuevoUsuario : ContentPage
         if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
         {
             await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
+            await Navigation.PushAsync(new MainPage());
         }
         else
         {
