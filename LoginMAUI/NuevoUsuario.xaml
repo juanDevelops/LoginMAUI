@@ -39,8 +39,12 @@
             <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Fill">
                 <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
                     <StackLayout Orientation="Horizontal" HeightRequest="50">
-                        <Frame BackgroundColor="#f5e7e2" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="3">
-                            <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                        <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="7">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf007;"/>
+                                </Image.Source>
+                            </Image>
                         </Frame>
                         <Entry x:Name="tbNombre" FontFamily="medium" Placeholder="Nombre" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
                     </StackLayout>
@@ -52,8 +56,12 @@
             <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="Fill">
                 <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
                     <StackLayout Orientation="Horizontal" HeightRequest="50">
-                        <Frame BackgroundColor="#f5e7e2" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="3">
-                            <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                        <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="7">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf0e0;"/>
+                                </Image.Source>
+                            </Image>
                         </Frame>
                         <Entry x:Name="tbEmail" FontFamily="medium" Placeholder="Email" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
                     </StackLayout>
@@ -65,8 +73,12 @@
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="Fill">
                 <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
                     <StackLayout Orientation="Horizontal" HeightRequest="50">
-                        <Frame BackgroundColor="#f5e7e2" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="3">
-                            <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                        <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="7">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf095;"/>
+                                </Image.Source>
+                            </Image>
                         </Frame>
                         <Entry x:Name="tbTelefono" FontFamily="medium" Placeholder="Telefono" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
                     </StackLayout>
@@ -99,8 +111,12 @@
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
                     <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
                         <StackLayout Orientation="Horizontal" HeightRequest="50">
-                            <Frame BackgroundColor="#f5e7e2" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="3">
-                                <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                            <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                                <Image Margin="7">
+                                    <Image.Source>
+                                        <FontImageSource FontFamily="fas" Glyph="&#xf023;"/>
+                                    </Image.Source>
+                                </Image>
                             </Frame>
                             <Entry x:Name="tbContraseña" FontFamily="medium" Placeholder="Contraseña" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
                         </StackLayout>
@@ -111,8 +127,12 @@
                 <StackLayout Orientation="Vertical" HorizontalOptions="Fill" Margin="0,5,0,0">
                     <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
                         <StackLayout Orientation="Horizontal" HeightRequest="50">
-                            <Frame BackgroundColor="#f5e7e2" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="3">
-                                <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+                            <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                                <Image Margin="7">
+                                    <Image.Source>
+                                        <FontImageSource FontFamily="fas" Glyph="&#xf023;"/>
+                                    </Image.Source>
+                                </Image>
                             </Frame>
                             <Entry x:Name="tbRepetirContraseña" FontFamily="medium" Placeholder="Repetir contraseña" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
                         </StackLayout>

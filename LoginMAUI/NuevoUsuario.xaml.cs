@@ -16,14 +16,14 @@ public partial class NuevoUsuario : ContentPage
     {
         char genero = cbFemenino.IsChecked ? 'f' :  'm';
 
-        if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
-        {
-            await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
-        }
-        else
-        {
-            await DisplayAlert("Aviso", db.errorMessage + db.ip1, "Ok");
-        }
+        //if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
+        //{
+        //    await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
+        //}
+        //else
+        //{
+        //    await DisplayAlert("Aviso", db.errorMessage + db.ip1, "Ok");
+        //}
     }
 
     private async void btnCancelar_Clicked(object sender, EventArgs e)

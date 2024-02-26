@@ -51,6 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\DMSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\DMSans-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
 	  <None Remove="Resources\Images\4213460-account-avatar-head-person-profile-user_115386.png" />
 	</ItemGroup>
 

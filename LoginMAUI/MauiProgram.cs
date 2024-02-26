@@ -15,6 +15,7 @@ namespace LoginMAUI
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("DMSans-Regular.ttf","medium");
                     fonts.AddFont("DMSans-Bold.ttf", "bold");
+                    fonts.AddFont("Font Awesome 6 Free-Solid-900.otf", "fas");
                 });
 
 #if DEBUG
