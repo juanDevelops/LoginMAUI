@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginMAUI.NuevoUsuario"
-             Title="NuevoUsuario"
+             Title="Registrarse"
              BackgroundColor="White">
 
     <Grid RowDefinitions="0.15*, 0.90*">
@@ -32,7 +32,7 @@
 
             <StackLayout Orientation="Vertical" Grid.Row="0">
                 <Label Text="Bienvenido" FontFamily="bold" FontSize="Title" TextColor="Black"/>
-                <Label Text="Debes registrarte para continuar." FontFamily="medium" TextColor="Black"/>
+                <Label Text="Debes registrarte para continuar." FontFamily="medium" TextColor="Gray"/>
             </StackLayout>
 
             <!--#region ENTRY NOMBRE -->

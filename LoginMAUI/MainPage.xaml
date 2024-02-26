@@ -1,37 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoginMAUI.MainPage">
+             x:Class="LoginMAUI.MainPage"
+             Title="Iniciar Sesion"
+             BackgroundColor="White">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="90*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="5*"/>
-        </Grid.RowDefinitions>
-        <HorizontalStackLayout Grid.Column="1" Grid.Row="1">
-            <Label 
-            Text="Login"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" TextColor="AntiqueWhite" FontAttributes="Bold"/>
-        </HorizontalStackLayout>
-        
-        <Image Source="descarga.jpeg" Grid.Column="1" Grid.Row="1"></Image>
-        <VerticalStackLayout Grid.Column="1" Grid.Row="2">
-            <Entry x:Name="eUser" Keyboard="Email" Placeholder="Usuario"/>
-            <Entry x:Name="ePassword" IsPassword="True" Placeholder="Contraseña"/>
-        </VerticalStackLayout>
-        <HorizontalStackLayout Grid.Column="1" Grid.Row="3">
-            <Button x:Name="btnIngresar" TextColor="Black" Background="AliceBlue" CornerRadius="30" Text="Ingresar" Padding="20" Clicked="btnIngresar_Clicked" BorderWidth="1"/>
-            <Button x:Name="btnNewUser" TextColor="White" Background="#34AB95"  CornerRadius="20" Text="Nuevo Usuario" Clicked="btnNewUser_Clicked" BorderWidth="2" FontAutoScalingEnabled="True" VerticalOptions="Fill" BorderColor="Snow"/>
-        </HorizontalStackLayout>
+    <Grid RowDefinitions="0.25*, 0.85*">
+        <Grid BackgroundColor="#fcc" HeightRequest="200"/>
+
+        <RoundRectangle Grid.Row="1" CornerRadius="30" Fill="White"/>
+        <Grid Grid.Row="1" RowSpacing="5" Margin="15,15,15,0" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Vertical" Grid.Row="0">
+                <Label Text="Bienvenido" FontFamily="bold" FontSize="Title" TextColor="Black"/>
+                <Label Text="Inicia sesion para continuar" FontFamily="medium" TextColor="Gray"/>
+            </StackLayout>
+
+            <!--#region ENTRY NOMBRE -->
+            <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Fill">
+                <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="7">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf007;"/>
+                                </Image.Source>
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="tbUser" FontFamily="medium" Placeholder="Usuario o Email" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--#endregion-->
+
+            <!--#region ENTRY CONTRASEÑA -->
+            <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="Fill">
+                <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Frame BackgroundColor="#fcc" BorderColor="#fcc" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="7">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf023;"/>
+                                </Image.Source>
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="tbContraseña" IsPassword="True" FontFamily="medium" Placeholder="Contraseña" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="10,0,20,0" />
+                        <ImageButton x:Name="togglePassword" Margin="12" Clicked="togglePassword_Clicked">
+                            <ImageButton.Source>
+                                <FontImageSource FontFamily="fas" Glyph="&#xf06e;" Color="#A3A3A3"/>
+                            </ImageButton.Source>
+                        </ImageButton>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--#endregion-->
+
+            <StackLayout Orientation="Horizontal" Grid.Row="3" HorizontalOptions="Fill">
+                <Label Text="Olvidaste la contraseña" TextColor="#fcc" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+
+            <Grid Grid.Row="4">
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnLogin" Text="Iniciar Sesion" Clicked="btnLogin_Clicked" HeightRequest="50" TextColor="White" Background="#fcc" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="5" Margin="0,15,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnSignUp" Text="Crea tu cuenta" Clicked="btnSignUp_Clicked" HeightRequest="50" TextColor="#fcc" Background="#fff" CornerRadius="30" HorizontalOptions="FillAndExpand" BorderColor="#fcc" BorderWidth="1.5" />
+                </StackLayout>
+            </Grid>
+
+        </Grid>
     </Grid>
 
 </ContentPage>

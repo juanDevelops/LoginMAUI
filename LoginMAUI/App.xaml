@@ -10,14 +10,13 @@
             </Style>
             <Style TargetType="DatePicker">
                 <Setter Property="BackgroundColor" Value="#f1f0f0"/>
-                <Setter Property="TextColor" Value="LightGray"/>
+                <Setter Property="TextColor" Value="#A3A3A3"/>
                 <Setter Property="FontFamily" Value="medium"/>
                 <Setter Property="FontSize" Value="14"/>
             </Style>
-            <!--<Style TargetType="Label">
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>-->
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="medium" />
+            </Style>
             <Style TargetType="Entry">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="TextColor" Value="#3d3d3d"/>

@@ -14,16 +14,24 @@ public partial class NuevoUsuario : ContentPage
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
-        char genero = cbFemenino.IsChecked ? 'f' :  'm';
+        char genero = cbFemenino.IsChecked ? 'f' : 'm';
+        bool contraseña = tbContraseña.Text == tbRepetirContraseña.Text ? true : false;
 
-        //if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
-        //{
-        //    await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
-        //}
-        //else
-        //{
-        //    await DisplayAlert("Aviso", db.errorMessage + db.ip1, "Ok");
-        //}
+        if (!contraseña)
+        {
+            await DisplayAlert("Aviso", $"Las contraseñas no coinciden.", "Ok");
+            return;
+        }
+
+        if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
+        {
+            await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
+        }
+        else
+        {
+
+            await DisplayAlert("Aviso", db.errorMessage, "Ok");
+        }
     }
 
     private async void btnCancelar_Clicked(object sender, EventArgs e)
