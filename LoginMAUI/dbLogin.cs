@@ -1,10 +1,13 @@
 ﻿using MySqlConnector;
+using System.Net;
 
 namespace LoginMAUI
 {
     public class dbLogin
     {
-        string connectionString = "Server=192.168.94.205;Port=3306;Database=loginDB;Uid=juan;Pwd=Abc123.;SSL Mode=None";
+        public static string ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(); // Get dynamic IP
+        string connectionString = $"Server={ip};Port=3306;Database=loginDB;Uid=juan;Pwd=Abc123.;SSL Mode=None";
+        public String ip1 = ip.ToString();
         public string errorMessage = "";
 
         public bool InsertarUsuario(string nombre, string telefono, string email, char genero, DateTime fechaNacimiento, string contraseña)
@@ -26,6 +29,8 @@ namespace LoginMAUI
                     command.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
                     command.Parameters.AddWithValue("@Contraseña", contraseña);
 
+                    
+
                     try
                     {
                         connection.Open();
@@ -34,6 +39,7 @@ namespace LoginMAUI
                     }
                     catch (MySqlException ex)
                     {
+
                         errorMessage = ex.Message;
                         // Manejo de excepciones específicas de MySQL
                     }

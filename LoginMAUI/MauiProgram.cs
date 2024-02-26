@@ -13,6 +13,8 @@ namespace LoginMAUI
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("DMSans-Regular.ttf","medium");
+                    fonts.AddFont("DMSans-Bold.ttf", "bold");
                 });
 
 #if DEBUG

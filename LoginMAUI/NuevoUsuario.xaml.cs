@@ -14,14 +14,15 @@ public partial class NuevoUsuario : ContentPage
 
     private async void btnGuardar_Clicked(object sender, EventArgs e)
     {
-        
+        char genero = cbFemenino.IsChecked ? 'f' :  'm';
+
         if (db.InsertarUsuario(tbNombre.Text, tbTelefono.Text, tbEmail.Text, 'f', dpFechaNacimiento.Date, tbContraseña.Text))
         {
             await DisplayAlert("Aviso", $"Usuario {tbNombre.Text} registrado correctamente.", "Ok");
         }
         else
         {
-            await DisplayAlert("Aviso", db.errorMessage, "Ok");
+            await DisplayAlert("Aviso", db.errorMessage + db.ip1, "Ok");
         }
     }
 
