@@ -110,7 +110,7 @@
             <!--#region BOTON GUARDAR -->
             <Grid Grid.Row="4">
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="btnGuardar" Text="Registrarse" Clicked="btnGuardar_Clicked" HeightRequest="50" TextColor="White" Background="#fcc" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                    <Button x:Name="btnGuardar" Text="Recuperar" Clicked="btnGuardar_Clicked" HeightRequest="50" TextColor="White" Background="#fcc" CornerRadius="30" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Grid>
             <!--#endregion-->
